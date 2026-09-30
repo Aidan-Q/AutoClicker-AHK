@@ -37,6 +37,9 @@ ddlButton := MyGui.Add("DropDownList", "w60 x+1 yp-3 Choose1", ["Left", "Right",
 ; ===== Register Initial Hotkey =====
 Hotkey(currentHotkey, toggleClicker)
 
+; ===== Handle Window Close Event =====
+MyGui.OnEvent("Close", (*) => ExitApp())
+
 ; ===== Display Window =====
 MyGui.Show()
 
